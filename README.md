@@ -1,1 +1,1 @@
-# upsftp
+# UpSftp
