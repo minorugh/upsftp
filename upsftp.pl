@@ -3,7 +3,7 @@
 # This is Upsftp, Version 1.0
 # Copyright (C) 2022, by Minoru Yamada.
 # https://minorugh.xsrv.jp/post/2022/0119-upsftp/
-# https://gist.github.com/minorugh/ba4657ed692ab3ef61006fe6b687eeee
+# https://github.com/minorugh/upsftp/blob/master/upsftp.pl
 # This program is modification of upftp.pl by Hiroshi Yuki for Net::SFTP::Forgeign.
 #
 # This program is free software; you can redistribute it and/or
