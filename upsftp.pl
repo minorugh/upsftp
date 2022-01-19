@@ -1,10 +1,10 @@
 #!/usr/bin/perl
 #
-# This is Upsftp, Version 1.0
+# This is UpSftp, Version 1.0
 # Copyright (C) 2022, by Minoru Yamada.
 # https://minorugh.xsrv.jp/post/2022/0119-upsftp/
-# https://github.com/minorugh/upsftp/blob/master/upsftp.pl
-# This program is modification of upftp.pl by Hiroshi Yuki for Net::SFTP::Forgeign.
+# https://gist.github.com/minorugh/ba4657ed692ab3ef61006fe6b687eeee
+# This program is modification of upftp.pl by Hiroshi Yuki, Use with SFTP.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
@@ -21,27 +21,23 @@ my $debug = 0;
 # Show update info.
 my $show_update = 1;
 # Your SFTP host name.
-my $hostname = 'minorugh.xsrv.jp';
+my $hostname = 'yoursftp.doain';
 # Your SFTP port.
-my $sftpport = '10022';
+my $sftpport = 'sftpport';
 # Your SFTP user name.
-my $username = 'minorugh';
+my $username = 'yourname';
 # Remote root directory (in fullpath)
-my $remoterootdir = '/home/minorugh/gospel-haiku.com/public_html';
+my $remoterootdir = '/home/youraccount/public_html';
 # Get HOME directory from environment variables
 my $home = $ENV{"HOME"};
 # Local root directory (in fullpath)
-my $localrootdir = "$home/Dropbox/GH";
+my $localrootdir = "$home/www";
 # File list (in fullpath)
-my $filelist = "$home/Dropbox/GH/upftp/filelist.txt";
+my $filelist = "$home/upsftp/filelist.txt";
 # Binary file extension
 my @binary_extension = qw(
     gif jpg png class pdf zip lzh tar gz tgz
 );
-
-## Module for sort filelist automatically. (need fullpath)
-require "/home/minoru/Dropbox/GH/upftp/sort.pl";
-&sort();
 
 ########################################
 # End of configuration.
