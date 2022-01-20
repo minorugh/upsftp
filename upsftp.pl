@@ -23,7 +23,7 @@ my $show_update = 1;
 # Your SFTP host name.
 my $hostname = 'yoursftp.doain';
 # Your SFTP port.
-my $sftpport = 'sftpport';
+my $portnumber = 'portnumber';
 # Your SFTP user name.
 my $username = 'yourname';
 # Remote root directory (in fullpath)
@@ -114,7 +114,7 @@ sub upsftp {
 sub sftp_put {
     my ($localfile, $remotefile) = @_;
     $sftp = Net::SFTP::Foreign->new($hostname,
-									port=> $sftpport,
+									port=> $portnumber,
 									user=> $username,
 									more=>[-o =>'StrictHostKeyChecking no']);
     $sftp->put($localfile, $remotefile);
