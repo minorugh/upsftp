@@ -30,8 +30,8 @@ my $username = 'yourname';
 my $remoterootdir = '/home/youraccount/public_html';
 # Get HOME directory from environment variables
 my $home = $ENV{"HOME"};
-# This script directory
-my $dir = "$home/Dropbox/GH/upftp";
+# This script directory (in fullpath)
+my $dir = "scriptdir";
 # Local root directory (in fullpath)
 my $localrootdir = "$home/www";
 # File list (in fullpath)
