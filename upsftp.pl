@@ -62,7 +62,7 @@ sub upsftp {
         print "\$username is empty, abort.\n";
         return;
     }
-    unless ($sftpport) {
+    unless ($portnumber) {
         print "\$hostport is empty, abort.\n";
         return;
     }
