@@ -30,18 +30,20 @@ my $username = 'yourname';
 my $remoterootdir = '/home/youraccount/public_html';
 # Get HOME directory from environment variables
 my $home = $ENV{"HOME"};
+# This script directory
+my $dir = "$home/Dropbox/GH/upftp";
 # Local root directory (in fullpath)
 my $localrootdir = "$home/www";
 # File list (in fullpath)
-my $filelist = "$home/upsftp/filelist.txt";
-# Binary file extension
-my @binary_extension = qw(
-    gif jpg png class pdf zip lzh tar gz tgz
-);
+my $filelist = "$dir/filelist.txt";
 
 ########################################
 # End of configuration.
 ########################################
+## Sort filelist (need fullpath)
+require "$dir/sort.pl";
+&sort();
+
 my $sftp;
 my @newfilelist;
 
