@@ -40,7 +40,7 @@ my $filelist = "$dir/filelist.txt";
 ########################################
 # End of configuration.
 ########################################
-## Sort filelist (need fullpath)
+## Module for sorting filelist (need full path)
 require "$dir/sort.pl";
 &sort();
 
