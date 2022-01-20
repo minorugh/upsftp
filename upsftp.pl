@@ -26,6 +26,8 @@ my $hostname = 'yoursftp.doain';
 my $portnumber = 'portnumber';
 # Your SFTP user name.
 my $username = 'yourname';
+# Optional settings
+my $moreoptions = [ -o => 'StrictHostKeyChecking no' ];
 # Remote root directory (in fullpath)
 my $remoterootdir = '/home/youraccount/public_html';
 # Get HOME directory from environment variables
@@ -116,7 +118,7 @@ sub sftp_put {
     $sftp = Net::SFTP::Foreign->new($hostname,
 									port=> $portnumber,
 									user=> $username,
-									more=>[-o =>'StrictHostKeyChecking no']);
+									more=> $moreoptions);
     $sftp->put($localfile, $remotefile);
 }
 1;
