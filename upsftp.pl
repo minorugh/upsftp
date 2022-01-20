@@ -117,15 +117,4 @@ sub sftp_put {
 									more=>[-o =>'StrictHostKeyChecking no']);
     $sftp->put($localfile, $remotefile);
 }
-
-# Ascii? Binary?
-sub is_binary {
-    my ($localfile) = @_;
-    foreach my $ext (@binary_extension) {
-        if ($localfile =~ /\.$ext$/) {
-            return 1;
-        }
-    }
-    return 0;
-}
 1;
