@@ -59,3 +59,10 @@ my $filelist = "$dir/filelist.txt";
 - The standard port for SFTP is usually 22, but if a port is set separately, set it.
 - In my case it worked without setting ssh-key, but I'm not sure if that's the case in any environment.
 
+## Filelist
+
+- First, describe the sub dir and the file name under localrootdir in the filelist.
+- When start UpSftp, the ones written in the filelist will be uploaded one by one.
+- When upload for the first time, the update time will be added to the filelist.
+- From the second time onward, only the updated files will be uploaded, and the others will be skipped.
+
