@@ -7,7 +7,6 @@ This program is a modification of Hiroshi Yuki's upftp.pl for use with SFTP.
 - [upftp.pl](https://gist.github.com/hyuki0000/f58ccabccba37b93dbb5823d4f019341) 
 
 For this program to work, you need to be able to use perl and ssh on your terminal,
-
 and have an environment where you can ssh to a remote server.
 
 ## Install module
@@ -16,7 +15,6 @@ Net::SFTP::Foreign does not require a bunch of additional modules and external l
 to work, just the OpenBSD SSH client (or any other client compatible enough).
 
 I have perlbrew and cpanm installed on Debian Linux, 
-
 so I installed the modules needed for this program with cpanm.
 
 ```perl
