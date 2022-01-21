@@ -1,21 +1,28 @@
 # UpSftp
 
-I used Yuki Hiroshi's upftp.pl to update the home page with FTPS.
+## Upload file over SFTP with Net::SFTP::Foreign
 
-But I wanted to try SFTP.
+This program is a modification of Hiroshi Yuki's upftp.pl for use with SFTP.
 
 - [upftp.pl](https://gist.github.com/hyuki0000/f58ccabccba37b93dbb5823d4f019341) 
 
-At first I tried to put Net::SFTP, but I couldn't get it.
+For this program to work, you need to be able to use perl and ssh on your terminal,
 
-And after a lot of research, I found information that Net::SFTP::Foreign is used when using Perl.
+and have an environment where you can ssh to a remote server.
 
-I immediately put it in with cpam. He easily recognized it.
+## Install module
 
-I got a message saying that IO::Pty is also needed, so I installed this as well.
+I have perlbrew and cpanm installed on Debian Linux, 
 
-In the case of my contracted xserver, SFTP could not be used on standard port 21, so I specified it in the configuration option.
+so I installed the modules needed for this program with cpanm.
 
-I was surprised that it works without setting ssh-key.
+```perl
+$ cpanm Net::SFTP::Foreign IO:Pty
+```
 
-Since it's a Linux environment, I think OpenSSH reads the config file by itself, but I'm not sure if it's okay in any environment.
+## 
+
+The standard port for SFTP is usually 22, but if a port is set separately, set it.
+
+In my case it worked without setting ssh-key, but I'm not sure if that's the case in any environment.
+
