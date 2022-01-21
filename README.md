@@ -62,10 +62,13 @@ my $filelist = "$dir/filelist.txt";
 
 ## Filelist
 
-- First, describe the sub dir and the file name under localrootdir in the filelist.
+UpSftp uploads only updated file, checking the time stamps in the filelist.
+
+- In the filelist, describe the filepath and filename under localrootdir.
 - When start UpSftp, the ones written in the filelist will be uploaded one by one.
-- When upload for the first time, the update time will be added to the filelist.
-- From the second time onward, only the updated files will be uploaded, and the others will be skipped.
+- After uploading, the update time will be added to the filelist.
+- Compare the time stamp in the filelist with the updatefile and upload only the new updatefile.
+
 
 ## Sort filelist 
 
