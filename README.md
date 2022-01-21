@@ -72,5 +72,6 @@ There are contents such as diary pages where new files increase monthly or yearl
 
 Therefore, when creating a new article, it is automatically added to the end of the filelist.
 
-After that, the list will be sorted automatically to make it easier to see.
+After that, it will be automatically sorted to make it easier to find duplicate settings.
+
 
