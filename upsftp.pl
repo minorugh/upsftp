@@ -30,12 +30,10 @@ my $username = 'yourname';
 my $moreoptions = [ -o => 'StrictHostKeyChecking no' ];
 # Remote root directory (in fullpath)
 my $remoterootdir = '/home/youraccount/public_html';
-# Get HOME directory from environment variables
-my $home = $ENV{"HOME"};
 # This script directory (in fullpath)
-my $dir = "scriptdir";
+my $dir = "$ENV{HOME}/scriptdir";
 # Local root directory (in fullpath)
-my $localrootdir = "$home/www";
+my $localrootdir = "$ENV{HOME}/wwwdir";
 # File list (in fullpath)
 my $filelist = "$dir/filelist.txt";
 
