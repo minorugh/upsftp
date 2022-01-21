@@ -20,10 +20,42 @@ so I installed the modules needed for this program with cpanm.
 $ cpanm Net::SFTP::Foreign IO::Pty
 ```
 
-## Port number
+## Configuration
 
-The standard port for SFTP is usually 22, but if a port is set separately, set it.
+The main settings are as follows
 
-## SSH-Key
-In my case it worked without setting ssh-key, but I'm not sure if that's the case in any environment.
+```perl
+########################################
+# Configuration
+########################################
+# Show debug info: 0 (nodebug), 1 (terse), 2 (verbose)
+my $debug = 0;
+# Show update info.
+my $show_update = 1;
+# Your SFTP host name.
+my $hostname = 'yoursftp.doain';
+# Your SFTP port.
+my $portnumber = 'portnumber';
+# Your SFTP user name.
+my $username = 'yourname';
+# Optional settings
+my $moreoptions = [ -o => 'StrictHostKeyChecking no' ];
+# Remote root directory (in fullpath)
+my $remoterootdir = '/home/youraccount/public_html';
+# Get HOME directory from environment variables
+my $home = $ENV{"HOME"};
+# This script directory (in fullpath)
+my $dir = "scriptdir";
+# Local root directory (in fullpath)
+my $localrootdir = "$home/www";
+# File list (in fullpath)
+my $filelist = "$dir/filelist.txt";
+
+########################################
+# End of configuration.
+########################################
+```
+
+- The standard port for SFTP is usually 22, but if a port is set separately, set it.
+- In my case it worked without setting ssh-key, but I'm not sure if that's the case in any environment.
 
