@@ -66,3 +66,11 @@ my $filelist = "$dir/filelist.txt";
 - When upload for the first time, the update time will be added to the filelist.
 - From the second time onward, only the updated files will be uploaded, and the others will be skipped.
 
+## Sort filelist 
+
+There are contents such as diary pages where new files increase monthly or yearly.
+
+Therefore, when creating a new article, it is automatically added to the end of the filelist.
+
+After that, the list will be sorted automatically to make it easier to see.
+
