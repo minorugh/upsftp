@@ -12,6 +12,10 @@ and have an environment where you can ssh to a remote server.
 
 ## Install module
 
+Net::SFTP::Foreign does not require a bunch of additional modules and external libraries
+
+to work, just the OpenBSD SSH client (or any other client compatible enough).
+
 I have perlbrew and cpanm installed on Debian Linux, 
 
 so I installed the modules needed for this program with cpanm.
