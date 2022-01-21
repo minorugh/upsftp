@@ -17,12 +17,13 @@ I have perlbrew and cpanm installed on Debian Linux,
 so I installed the modules needed for this program with cpanm.
 
 ```perl
-$ cpanm Net::SFTP::Foreign IO:Pty
+$ cpanm Net::SFTP::Foreign IO::Pty
 ```
 
-## 
+## SSH port
 
 The standard port for SFTP is usually 22, but if a port is set separately, set it.
 
+## SSH-Key
 In my case it worked without setting ssh-key, but I'm not sure if that's the case in any environment.
 
