@@ -69,10 +69,6 @@ my $filelist = "$dir/filelist.txt";
 
 ## Sort filelist 
 
-There are contents such as diary pages where new files increase monthly or yearly.
-
-Therefore, when creating a new article, it is automatically added to the end of the filelist.
-
-After that, it will be automatically sorted to make it easier to find duplicate settings.
-
-
+- There are contents such as diary pages where new files increase monthly or yearly.
+- Therefore, when creating a new article, it is automatically added to the end of the filelist.
+- After that, it will be automatically sorted to make it easier to find duplicate settings.
