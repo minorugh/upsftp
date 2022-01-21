@@ -15,7 +15,7 @@ Net::SFTP::Foreign does not require a bunch of additional modules and external l
 to work, just the OpenBSD SSH client (or any other client compatible enough).
 
 I have perlbrew and cpanm installed on Debian Linux, 
-so I installed the modules needed for this program with cpanm.
+so I installed the modules with cpanm.
 
 ```perl
 $ cpanm Net::SFTP::Foreign IO::Pty
