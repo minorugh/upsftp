@@ -31,11 +31,9 @@ my $moreoptions = [ -o => 'StrictHostKeyChecking no' ];
 # Remote root directory (in fullpath)
 my $remoterootdir = '/home/youraccount/public_html';
 # Local root directory (in fullpath)
-my $localrootdir = "$ENV{HOME}/wwwdir";
-# This script directory (in fullpath)
-my $dir = "$ENV{HOME}/scriptdir";
+my $localrootdir = "/usr/home/myname";
 # File list (in fullpath)
-my $filelist = "$dir/filelist.txt";
+my $filelist = "/usr/home/myname/filelist.txt";
 
 ########################################
 # End of configuration.
