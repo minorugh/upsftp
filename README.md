@@ -20,7 +20,7 @@ so I installed the modules needed for this program with cpanm.
 $ cpanm Net::SFTP::Foreign IO::Pty
 ```
 
-## SSH port
+## Port number
 
 The standard port for SFTP is usually 22, but if a port is set separately, set it.
 
