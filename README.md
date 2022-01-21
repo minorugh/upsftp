@@ -6,8 +6,7 @@ This program is a modification of Hiroshi Yuki's upftp.pl for use with SFTP.
 
 - [upftp.pl](https://gist.github.com/hyuki0000/f58ccabccba37b93dbb5823d4f019341) 
 
-For this program to work, you need to be able to use perl and ssh on your terminal,
-and have an environment where you can ssh to a remote server.
+For the program to work, you must be able to use perl and SSH into a remote server.
 
 ## Install module
 

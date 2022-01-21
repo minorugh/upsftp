@@ -40,9 +40,6 @@ my $filelist = "$dir/filelist.txt";
 ########################################
 # End of configuration.
 ########################################
-## Module for sorting filelist (need full path)
-require "$dir/sort.pl";
-&sort();
 
 my $sftp;
 my @newfilelist;
