@@ -38,7 +38,6 @@ my $filelist = "/usr/home/myname/filelist.txt";
 ########################################
 # End of configuration.
 ########################################
-
 my $sftp;
 my @newfilelist;
 
