@@ -117,7 +117,7 @@ sub sftp_put {
 
 # Closing the connection to the remorte server
 sub sftp_clode {
-	print "Disconnecting from remote server\n";
 	undef $sftp;
+	print "Disconnecting from remote server\n";
 }
 1;
