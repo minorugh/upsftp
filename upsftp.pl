@@ -96,7 +96,7 @@ sub upsftp {
         push(@newfilelist, "$filename,$curtime\n");
     }
     close(FILELIST);
-	&sftp_disconnect;
+	&sftp_close;
     if (!open(FILELIST, "> $filelist")) {
         print "$filelist: Cannot create.\n";
         exit(-1);
@@ -115,8 +115,8 @@ sub sftp_put {
     $sftp->put($localfile, $remotefile);
 }
 
-# Disconnecting from remorte server
-sub sftp_disconnect {
+# Closing the connection to the remorte server
+sub sftp_clode {
 	undef $sftp;
 	print "Disconnecting from remote server\n";
 }
