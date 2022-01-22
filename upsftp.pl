@@ -3,9 +3,9 @@
 # This is UpSftp, Version 1.0
 # Copyright (C) 2022, by Minoru Yamada.
 # https://minorugh.xsrv.jp/post/2022/0119-upsftp/
-# https://gist.github.com/minorugh/ba4657ed692ab3ef61006fe6b687eeee
-# upfstp.pl is a modification of Hiroshi Yuki's upftp.pl for use with SFTP.
+# https://github.com/minorugh/upsftp
 #
+# upfstp.pl is a modification of Hiroshi Yuki's upftp.pl, use with SFTP.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
