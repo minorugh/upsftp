@@ -1,4 +1,4 @@
-# UpSftp
+# UpSFTP
 
 ## Upload file over SFTP with Net::SFTP::Foreign
 
@@ -61,7 +61,7 @@ my $filelist = "$dir/filelist.txt";
 
 ## Filelist
 
-UpSftp uploads only updated file, checking the time stamps in the filelist.
+UpSftp checks the filelist's timestamp to upload only updated files.
 
 - In the filelist, describe the filepath and filename under localrootdir.
 - When start UpSftp, the ones written in the filelist will be uploaded one by one.

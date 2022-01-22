@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# This is UpSftp, Version 1.0
+# This is UpSFTP, Version 1.0
 # Copyright (C) 2022, by Minoru Yamada.
 # https://minorugh.xsrv.jp/post/2022/0119-upsftp/
 # https://github.com/minorugh/upsftp
