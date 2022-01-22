@@ -68,9 +68,3 @@ UpSftp uploads only updated file, checking the time stamps in the filelist.
 - After uploading, the update time will be added to the filelist.
 - Compare the time stamp in the filelist with the updatefile and upload only the new updatefile.
 
-
-## Sort filelist 
-
-- There are contents such as diary pages where new files increase monthly or yearly.
-- Therefore, when creating a new article, it is automatically added to the end of the filelist.
-- After that, it will be automatically sorted to make it easier to find duplicate settings.
