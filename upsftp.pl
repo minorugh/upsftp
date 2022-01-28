@@ -22,7 +22,7 @@ my $debug = 0;
 my $show_update = 1;
 # Your SFTP host name.
 my $hostname = 'yoursftp.doain';
-# Your SFTP port.
+# Your SFTP portnumber.
 my $portnumber = 'portnumber';
 # Your SFTP user name.
 my $username = 'yourname';
@@ -31,9 +31,9 @@ my $moreoptions = [ -o => 'StrictHostKeyChecking no' ];
 # Remote root directory (in fullpath)
 my $remoterootdir = '/home/youraccount/public_html';
 # Local root directory (in fullpath)
-my $localrootdir = "/usr/home/myname";
+my $localrootdir = "/home/myname";
 # File list (in fullpath)
-my $filelist = "/usr/home/myname/filelist.txt";
+my $filelist = "/home/myname/filelist.txt";
 
 ########################################
 # End of configuration.
