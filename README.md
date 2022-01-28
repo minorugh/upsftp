@@ -57,7 +57,7 @@ my $filelist = "$dir/filelist.txt";
 ```
 
 - The standard port for SFTP is usually 22, but if a port is set separately, set it.
-- In my case it worked without setting ssh-key, but I'm not sure if that's the case in any environment.
+- In my case, I automatically entered the passphrase at login and executed ssh-key, so I didn't need to set the keypath in sftp.pl.
 
 ## Filelist
 
