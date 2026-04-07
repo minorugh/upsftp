@@ -1,0 +1,200 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="no-cache" http-equiv="Pragma">
+    <meta name="description" content="">
+    <meta name="keywords" content="俳句,俳句指導,俳句サイト,歳時記,吟行,インターネット句会,インターネット俳句会,明石句会、夙川句会、俳句会,レッスン,エッセイ,初心者,聖書,キリスト,ゴスペル,GOSPEL,HAIKU,句会,入門,添削,インターネット,クリスチャン,教会">
+    <meta name="author" content="やまだみのる / Minoru Yamada">
+    <link rel="icon" type="image/png" href="https://gospel-haiku.com/img/favicon.png">
+    <link rel="apple-touch-icon" href="https://gospel-haiku.com/img/favicon.png"> <!-- iOS向けにも推奨 -->
+    <link rel="shortcut icon" href="https://gospel-haiku.com/img/favicon.png">
+    
+    <title>UpSFTP</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/149e36c312.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//webfonts.xserver.jp/js/xserver.js"></script>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="https://gospel-haiku.com/fonts/style.css">
+    <link rel="stylesheet" type="text/css" href="https://gospel-haiku.com/common/css/main.css">
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- page top buttom -->
+    <script type="text/javascript">
+     $(function() {
+       var showFlag = false;
+       var topBtn = $('#pagetop');
+       topBtn.css('bottom', '-100px');
+       var showFlag = false;
+       //スクロールが100に達したらボタン表示
+       $(window).scroll(function () {
+	 if ($(this).scrollTop() > 100) {
+	   if (showFlag == false) {
+	     showFlag = true;
+	     topBtn.stop().animate({'bottom' : '100px'}, 200);
+	   }
+	 } else {
+	   if (showFlag) {
+	     showFlag = false;
+	     topBtn.stop().animate({'bottom' : '-100px'}, 200);
+	   }
+	 }
+       });
+       //スクロールしてトップ
+       topBtn.click(function () {
+	 $('body,html').animate({
+	   scrollTop: 0
+	 }, 500);
+	 return false;
+       });
+     });
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <meta property="og:title" content="UpSFTP">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./icon/600x300.png">
+    <meta property="og:site_name" content="ゴスペル俳句 / やまだみのる">
+    <meta property="og:description" content="初心者のための俳句サイト。入門俳句レッスン、インターネット句会、無料添削制度やオフラインでの月例句会。">
+    <meta property="og:url" content="./">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@gospelhaiku">
+    <meta name="twitter:creator" content="@gospelhaiku">
+    <meta name="twitter:title" content="UpSFTP">
+    <meta name="twitter:description" content="初心者のための俳句サイト。入門俳句レッスン、インターネット句会、無料添削制度やオフラインでの月例句会。">
+    <meta name="twitter:image" content="./icon/600x300.png">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131365555-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-131365555-1');
+</script>
+<!-- Automatically adjusts the height of the iframe -->
+<script>
+(function(window, $){
+	$(window).on("load",function(){
+		$('iframe.autoHeight').each(function(){
+			var D = $(this).get(0).contentWindow.document;
+			var innerHeight = Math.max(
+				D.body.scrollHeight, D.documentElement.scrollHeight,
+				D.body.offsetHeight, D.documentElement.offsetHeight,
+				D.body.clientHeight, D.documentElement.clientHeight
+				);
+			$(this).removeAttr("height").css('height', innerHeight + 'px');
+		});
+	});
+})(window, jQuery);
+</script>
+
+ <!-- 各ページで定義したスクリプが挿入される -->
+ <!-- 各ページで定義したスタイルが挿入される -->
+</head>
+
+<body>
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header" style="margin-top:.2em;">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-right">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+	<a class="TOOLTIP navbar-brand" title="GHの TOPページへ戻る" href="https://gospel-haiku.com/">
+	  <span id="logo-gh"><img src="https://gospel-haiku.com/img/gh.png"></span></a>
+	  <span class="site-title"><a href="https://minorugh.com<!--#echo var="DOCUMENT_URI"-->">UpSFTP</a></span>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-right">
+	<ul class="nav navbar-nav navbar-right">
+	  <li><a class="TOOLTIP" title="みのるの日記" href="../dia/">
+	    <span class="fa fa-fw fa-newspaper-o"></span> 日記</a></li>
+	  <li><a class="TOOLTIP" title="談話室" href="../danwa/html/">
+	    <span class="fa fa-fw fa-coffee"></span> 談話室</a></li>
+	  <li><a class="TOOLTIP" title="Profile" href="../#i4">
+	    <span class="fa fa-fw fa-user-circle"></span> Profile</a></li>
+	  <li><a class="TOOLTIP" title="Feedback" href="../feed/">
+	    <span class="fa fa-fw fa-envelope-open-o"></span> Feedback</a></li>
+          <li><a class="TOOLTIP" title="Search" href="../search/">
+	    <span class="fa fa-fw fa-search"></span> Search</a></li>
+	</ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container"><!-- whole container -->
+    <div class="row">
+      <div class="col-md-12">
+ <!-- 各ページで定義した navicationが挿入される -->
+	<article style="margin-bottom:2em">
+	  <p><b></b></p>
+	  <p></p>
+	</article>
+
+
+<h1 class="title">UpSFTP</h1>
+<h2 class="subtitle">SSHでホームページを更新するための Perlスクリプト</h2>
+<p class="author">やまだみのる</p>
+
+
+
+
+
+<p><h2>スクリプトはこちらで公開しています.</h2>
+</p><p><a href="https://github.com/minorugh/upsftp" class="btn btn-default btn-lg">https://github.com/minorugh/upsftp</a>
+</p><p><img src="https://gospel-haiku.com/common/img/sep.png"  alt="" width="200" height="45" border="0" />
+
+</p>
+
+<p>感想やお問合せはお気軽にどうぞ。
+</p><p><p style="margin-top:.5em;">
+<a class="btn btn-primary btn-lg" style="margin-top:.5em;" title="Feedback!" href="../feed/form_non.cgi?"><i class="fa fa fa-envelope-o"></i> Feedback</a>
+<a class="btn btn-primary btn-lg" style="margin-top:.5em;" title="Feedback!" href="https://x.com/gospelhaiku"><i class="fa fa fa-twitter"></i> Twitter&ensp;</a>
+<a class="btn btn-primary btn-lg" style="margin-top:.5em;" title="Feedback!" href="https://mastodon.social/@minorugh"><img src="../topimg/mastodon.png" width=16px> Mastodon</a>
+<a class="btn btn-primary btn-lg" style="margin-top:.5em;" title="Feedback!" href="https://bsky.app/profile/minorugh.bsky.social"><img src="../topimg/bluesky.png" width=16px> Bluesky</a>
+</p>
+</p>
+
+</div>
+	</div>
+  </div><!-- container -->
+  <script>
+   $('.TOOLTIP').tooltip({
+     placement: 'auto',
+   });
+  </script>
+  <footer class="site-footer">
+    <small class="company-copyright">Copyright (c) やまだみのる Allrights reserved. | <a style="color:#AFD3A4" href="/info/policy.html">Site Policy</a></small> </footer>
+</body></html>
+
