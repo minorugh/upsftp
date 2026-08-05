@@ -1,9 +1,8 @@
 #!/usr/bin/perl
 #
 # This is UpSFTP, Version 1.0
-# Copyright (C) 2022, by Minoru Yamada.
+# Copyright (C) 2022 by Minoru Yamada.
 # This program is a modification of Hiroshi Yuki's upftp.pl for use with SFTP.
-# https://minorugh.xsrv.jp/post/2022/0119-upsftp/
 # https://github.com/minorugh/upsftp
 #
 # This program is free software; you can redistribute it and/or
@@ -11,6 +10,7 @@
 #
 use strict;
 use warnings;
+
 use Net::SFTP::Foreign;
 
 ########################################
@@ -21,23 +21,23 @@ my $debug = 0;
 # Show update info.
 my $show_update = 1;
 # Your SFTP host name.
-my $hostname = 'yoursftp.doain';
-# Your SFTP portnumber.
-my $portnumber = 'portnumber';
+my $hostname = 'sv13268.xserver.jp';
 # Your SFTP user name.
-my $username = 'yourname';
-# Optional settings
+my $username = 'minorugh';
+# Your SFTP portnumber.
+my $portnumber = '10022';
+# ssh への追加オプション
 my $moreoptions = [ -o => 'StrictHostKeyChecking no' ];
 # Remote root directory (in fullpath)
-my $remoterootdir = '/home/youraccount/public_html';
+my $remoterootdir = '/home/minorugh/gospel-haiku.com/public_html';
 # Local root directory (in fullpath)
-my $localrootdir = "/home/myname";
+my $localrootdir = "/home/minoru/Dropbox/GH";
 # File list (in fullpath)
-my $filelist = "/home/myname/filelist.txt";
+my $filelist = "/home/minoru/Dropbox/GH/upsftp/filelist.cvs";
 
-########################################
+################################################
 # End of configuration.
-########################################
+################################################
 my $sftp;
 my @newfilelist;
 
@@ -46,7 +46,7 @@ exit(0);
 
 sub upsftp {
     if ($debug) {
-		print "Simulation only, I do not transfer any file.\n";
+        print "Simulation only, I do not transfer any file.\n";
     }
     unless ($hostname) {
         print "\$hostname is empty, abort.\n";
@@ -88,7 +88,7 @@ sub upsftp {
         print "mtime = $mtime\n" if ($debug > 1);
         if (defined($mtime) and $mtime > $updatetime) {
             print "Update $filename\n" if ($debug or $show_update);
-			&sftp_put("$localrootdir/$filename", "$remoterootdir/$filename");
+            &sftp_put("$localrootdir/$filename", "$remoterootdir/$filename");
         } else {
             print "Skip $filename\n" if ($debug);
         }
@@ -96,7 +96,7 @@ sub upsftp {
         push(@newfilelist, "$filename,$curtime\n");
     }
     close(FILELIST);
-	&sftp_close;
+    &sftp_close;
     if (!open(FILELIST, "> $filelist")) {
         print "$filelist: Cannot create.\n";
         exit(-1);
@@ -109,15 +109,16 @@ sub upsftp {
 sub sftp_put {
     my ($localfile, $remotefile) = @_;
     $sftp = Net::SFTP::Foreign->new($hostname,
-									port=> $portnumber,
-									user=> $username,
-									more=> $moreoptions);
+                    port=> $portnumber,
+                    user=> $username,
+                    more=> $moreoptions);
     $sftp->put($localfile, $remotefile);
 }
 
 # Closing the connection to the remorte server
-sub sftp_clode {
-	undef $sftp;
-	print "Disconnecting from remote server\n";
+sub sftp_close {
+    undef $sftp;
+    print "Disconnecting from remote server\n";
+    sleep(1);
 }
 1;
